@@ -1,8 +1,8 @@
-extern crate flate2;
+extern crate flate2_expose;
 
-use flate2::bufread::ZlibDecoder;
-use flate2::write::ZlibEncoder;
-use flate2::Compression;
+use flate2_expose::bufread::ZlibDecoder;
+use flate2_expose::write::ZlibEncoder;
+use flate2_expose::Compression;
 use std::io;
 use std::io::prelude::*;
 

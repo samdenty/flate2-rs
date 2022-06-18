@@ -1,7 +1,7 @@
-extern crate flate2;
+extern crate flate2_expose;
 
-use flate2::write::GzEncoder;
-use flate2::Compression;
+use flate2_expose::write::GzEncoder;
+use flate2_expose::Compression;
 use std::env::args;
 use std::fs::File;
 use std::io::copy;

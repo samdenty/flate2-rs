@@ -44,8 +44,8 @@
 //! are decoding directly from a `&[u8]`, use the [`bufread`] types.
 //!
 //! ```
-//! use flate2::write::GzEncoder;
-//! use flate2::Compression;
+//! use flate2_expose::write::GzEncoder;
+//! use flate2_expose::Compression;
 //! use std::io;
 //! use std::io::prelude::*;
 //!
@@ -61,7 +61,7 @@
 //! Other various types are provided at the top-level of the crate for
 //! management and dealing with encoders/decoders. Also note that types which
 //! operate over a specific trait often implement the mirroring trait as well.
-//! For example a `flate2::read::DeflateDecoder<T>` *also* implements the
+//! For example a `flate2_expose::read::DeflateDecoder<T>` *also* implements the
 //! `Write` trait if `T: Write`. That is, the "dual trait" is forwarded directly
 //! to the underlying object if available.
 //!
@@ -71,7 +71,7 @@
 //! [read]: https://doc.rust-lang.org/std/io/trait.Read.html
 //! [write]: https://doc.rust-lang.org/std/io/trait.Write.html
 //! [bufread]: https://doc.rust-lang.org/std/io/trait.BufRead.html
-#![doc(html_root_url = "https://docs.rs/flate2/0.2")]
+#![doc(html_root_url = "https://docs.rs/flate2_expose/0.2")]
 #![deny(missing_docs)]
 #![deny(missing_debug_implementations)]
 #![allow(trivial_numeric_casts)]

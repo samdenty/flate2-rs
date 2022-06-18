@@ -15,8 +15,8 @@ use crate::{Compress, Decompress};
 ///
 /// ```
 /// use std::io::prelude::*;
-/// use flate2::Compression;
-/// use flate2::write::DeflateEncoder;
+/// use flate2_expose::Compression;
+/// use flate2_expose::write::DeflateEncoder;
 ///
 /// // Vec<u8> implements Write to print the compressed bytes of sample string
 /// # fn main() {
@@ -179,9 +179,9 @@ impl<W: Read + Write> Read for DeflateEncoder<W> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// # use flate2::Compression;
-/// # use flate2::write::DeflateEncoder;
-/// use flate2::write::DeflateDecoder;
+/// # use flate2_expose::Compression;
+/// # use flate2_expose::write::DeflateEncoder;
+/// use flate2_expose::write::DeflateDecoder;
 ///
 /// # fn main() {
 /// #    let mut e = DeflateEncoder::new(Vec::new(), Compression::default());

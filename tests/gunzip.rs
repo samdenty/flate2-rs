@@ -1,7 +1,7 @@
-extern crate flate2;
+extern crate flate2_expose;
 
-use flate2::read::GzDecoder;
-use flate2::read::MultiGzDecoder;
+use flate2_expose::read::GzDecoder;
+use flate2_expose::read::MultiGzDecoder;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::{self, BufReader};

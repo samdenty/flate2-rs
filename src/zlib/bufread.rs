@@ -16,8 +16,8 @@ use crate::{Compress, Decompress};
 ///
 /// ```
 /// use std::io::prelude::*;
-/// use flate2::Compression;
-/// use flate2::bufread::ZlibEncoder;
+/// use flate2_expose::Compression;
+/// use flate2_expose::bufread::ZlibEncoder;
 /// use std::fs::File;
 /// use std::io::BufReader;
 ///
@@ -129,9 +129,9 @@ impl<R: BufRead + Write> Write for ZlibEncoder<R> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// # use flate2::Compression;
-/// # use flate2::write::ZlibEncoder;
-/// use flate2::bufread::ZlibDecoder;
+/// # use flate2_expose::Compression;
+/// # use flate2_expose::write::ZlibEncoder;
+/// use flate2_expose::bufread::ZlibDecoder;
 ///
 /// # fn main() {
 /// # let mut e = ZlibEncoder::new(Vec::new(), Compression::default());

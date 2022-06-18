@@ -16,8 +16,8 @@ use crate::bufreader::BufReader;
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// use flate2::Compression;
-/// use flate2::read::DeflateEncoder;
+/// use flate2_expose::Compression;
+/// use flate2_expose::read::DeflateEncoder;
 ///
 /// # fn main() {
 /// #    println!("{:?}", deflateencoder_read_hello_world().unwrap());
@@ -130,9 +130,9 @@ impl<W: Read + Write> Write for DeflateEncoder<W> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// # use flate2::Compression;
-/// # use flate2::write::DeflateEncoder;
-/// use flate2::read::DeflateDecoder;
+/// # use flate2_expose::Compression;
+/// # use flate2_expose::write::DeflateEncoder;
+/// use flate2_expose::read::DeflateDecoder;
 ///
 /// # fn main() {
 /// #    let mut e = DeflateEncoder::new(Vec::new(), Compression::default());

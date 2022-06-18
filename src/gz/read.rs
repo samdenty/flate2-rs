@@ -19,8 +19,8 @@ use crate::Compression;
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// use flate2::Compression;
-/// use flate2::read::GzEncoder;
+/// use flate2_expose::Compression;
+/// use flate2_expose::read::GzEncoder;
 ///
 /// // Return a vector containing the GZ compressed version of hello world
 ///
@@ -103,9 +103,9 @@ impl<R: Read + Write> Write for GzEncoder<R> {
 ///
 /// use std::io::prelude::*;
 /// use std::io;
-/// # use flate2::Compression;
-/// # use flate2::write::GzEncoder;
-/// use flate2::read::GzDecoder;
+/// # use flate2_expose::Compression;
+/// # use flate2_expose::write::GzEncoder;
+/// use flate2_expose::read::GzDecoder;
 ///
 /// # fn main() {
 /// #    let mut e = GzEncoder::new(Vec::new(), Compression::default());
@@ -199,9 +199,9 @@ impl<R: Read + Write> Write for GzDecoder<R> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// # use flate2::Compression;
-/// # use flate2::write::GzEncoder;
-/// use flate2::read::MultiGzDecoder;
+/// # use flate2_expose::Compression;
+/// # use flate2_expose::write::GzEncoder;
+/// use flate2_expose::read::MultiGzDecoder;
 ///
 /// # fn main() {
 /// #    let mut e = GzEncoder::new(Vec::new(), Compression::default());

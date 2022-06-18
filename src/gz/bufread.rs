@@ -137,8 +137,8 @@ pub(crate) fn read_gz_header<R: Read>(r: &mut R) -> io::Result<GzHeader> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// use flate2::Compression;
-/// use flate2::bufread::GzEncoder;
+/// use flate2_expose::Compression;
+/// use flate2_expose::bufread::GzEncoder;
 /// use std::fs::File;
 /// use std::io::BufReader;
 ///
@@ -282,9 +282,9 @@ impl<R: BufRead + Write> Write for GzEncoder<R> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// # use flate2::Compression;
-/// # use flate2::write::GzEncoder;
-/// use flate2::bufread::GzDecoder;
+/// # use flate2_expose::Compression;
+/// # use flate2_expose::write::GzEncoder;
+/// use flate2_expose::bufread::GzDecoder;
 ///
 /// # fn main() {
 /// #   let mut e = GzEncoder::new(Vec::new(), Compression::default());
@@ -634,9 +634,9 @@ impl<R: BufRead + Write> Write for GzDecoder<R> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// # use flate2::Compression;
-/// # use flate2::write::GzEncoder;
-/// use flate2::bufread::MultiGzDecoder;
+/// # use flate2_expose::Compression;
+/// # use flate2_expose::write::GzEncoder;
+/// use flate2_expose::bufread::MultiGzDecoder;
 ///
 /// # fn main() {
 /// #   let mut e = GzEncoder::new(Vec::new(), Compression::default());

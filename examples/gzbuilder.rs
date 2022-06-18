@@ -1,7 +1,7 @@
-extern crate flate2;
+extern crate flate2_expose;
 
-use flate2::Compression;
-use flate2::GzBuilder;
+use flate2_expose::Compression;
+use flate2_expose::GzBuilder;
 use std::fs::File;
 use std::io;
 use std::io::prelude::*;

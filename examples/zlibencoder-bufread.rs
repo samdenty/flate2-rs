@@ -1,7 +1,7 @@
-extern crate flate2;
+extern crate flate2_expose;
 
-use flate2::bufread::ZlibEncoder;
-use flate2::Compression;
+use flate2_expose::bufread::ZlibEncoder;
+use flate2_expose::Compression;
 use std::fs::File;
 use std::io;
 use std::io::prelude::*;

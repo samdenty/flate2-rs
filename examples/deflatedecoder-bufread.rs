@@ -1,8 +1,8 @@
-extern crate flate2;
+extern crate flate2_expose;
 
-use flate2::bufread::DeflateDecoder;
-use flate2::write::DeflateEncoder;
-use flate2::Compression;
+use flate2_expose::bufread::DeflateDecoder;
+use flate2_expose::write::DeflateEncoder;
+use flate2_expose::Compression;
 use std::io;
 use std::io::prelude::*;
 

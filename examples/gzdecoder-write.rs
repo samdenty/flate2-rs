@@ -1,7 +1,7 @@
-extern crate flate2;
+extern crate flate2_expose;
 
-use flate2::write::{GzDecoder, GzEncoder};
-use flate2::Compression;
+use flate2_expose::write::{GzDecoder, GzEncoder};
+use flate2_expose::Compression;
 use std::io;
 use std::io::prelude::*;
 

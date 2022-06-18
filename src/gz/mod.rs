@@ -92,8 +92,8 @@ impl GzHeader {
 /// use std::io::prelude::*;
 /// # use std::io;
 /// use std::fs::File;
-/// use flate2::GzBuilder;
-/// use flate2::Compression;
+/// use flate2_expose::GzBuilder;
+/// use flate2_expose::Compression;
 ///
 /// // GzBuilder opens a file and writes a sample string using GzBuilder pattern
 ///

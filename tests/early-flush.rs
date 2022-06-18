@@ -1,13 +1,13 @@
-extern crate flate2;
+extern crate flate2_expose;
 
 use std::io::{Read, Write};
 
-use flate2::read::GzDecoder;
-use flate2::write::GzEncoder;
+use flate2_expose::read::GzDecoder;
+use flate2_expose::write::GzEncoder;
 
 #[test]
 fn smoke() {
-    let mut w = GzEncoder::new(Vec::new(), flate2::Compression::default());
+    let mut w = GzEncoder::new(Vec::new(), flate2_expose::Compression::default());
     w.flush().unwrap();
     w.write_all(b"hello").unwrap();
 

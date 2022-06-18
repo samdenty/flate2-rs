@@ -1,6 +1,9 @@
 [package]
-name = "flate2"
-authors = ["Alex Crichton <alex@alexcrichton.com>", "Josh Triplett <josh@joshtriplett.org>"]
+name = "flate2-expose"
+authors = [
+  "Alex Crichton <alex@alexcrichton.com>",
+  "Josh Triplett <josh@joshtriplett.org>",
+]
 version = "1.0.24"
 edition = "2018"
 license = "MIT OR Apache-2.0"
@@ -32,10 +35,10 @@ quickcheck = { version = "1.0", default-features = false }
 
 [features]
 default = ["rust_backend"]
-any_zlib = [] # note: this is not a real user-facing feature
+any_zlib = []                                         # note: this is not a real user-facing feature
 zlib = ["any_zlib", "libz-sys"]
 zlib-ng-compat = ["zlib", "libz-sys/zlib-ng"]
 zlib-ng = ["any_zlib", "libz-ng-sys"]
 cloudflare_zlib = ["any_zlib", "cloudflare-zlib-sys"]
 rust_backend = ["miniz_oxide"]
-miniz-sys = ["rust_backend"] # For backwards compatibility
+miniz-sys = ["rust_backend"]                          # For backwards compatibility

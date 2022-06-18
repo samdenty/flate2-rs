@@ -19,8 +19,8 @@ use crate::{Compress, Compression, Decompress, Status};
 ///
 /// ```
 /// use std::io::prelude::*;
-/// use flate2::Compression;
-/// use flate2::write::GzEncoder;
+/// use flate2_expose::Compression;
+/// use flate2_expose::write::GzEncoder;
 ///
 /// // Vec<u8> implements Write to print the compressed bytes of sample string
 /// # fn main() {
@@ -179,8 +179,8 @@ impl<W: Write> Drop for GzEncoder<W> {
 /// ```
 /// use std::io::prelude::*;
 /// use std::io;
-/// use flate2::Compression;
-/// use flate2::write::{GzEncoder, GzDecoder};
+/// use flate2_expose::Compression;
+/// use flate2_expose::write::{GzEncoder, GzDecoder};
 ///
 /// # fn main() {
 /// #    let mut e = GzEncoder::new(Vec::new(), Compression::default());
