@@ -150,7 +150,8 @@ impl<W: Read + Write> Write for ZlibEncoder<W> {
 /// ```
 #[derive(Debug)]
 pub struct ZlibDecoder<R> {
-    inner: bufread::ZlibDecoder<BufReader<R>>,
+    /// The underlying decoder
+    pub inner: bufread::ZlibDecoder<BufReader<R>>,
 }
 
 impl<R: Read> ZlibDecoder<R> {
