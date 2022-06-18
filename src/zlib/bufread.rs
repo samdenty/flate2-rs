@@ -153,7 +153,8 @@ impl<R: BufRead + Write> Write for ZlibEncoder<R> {
 #[derive(Debug)]
 pub struct ZlibDecoder<R> {
     obj: R,
-    data: Decompress,
+    /// The underlying decompressor.
+    pub data: Decompress,
 }
 
 impl<R: BufRead> ZlibDecoder<R> {

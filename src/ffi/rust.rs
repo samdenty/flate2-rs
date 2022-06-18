@@ -36,8 +36,8 @@ fn format_from_bool(zlib_header: bool) -> DataFormat {
 
 pub struct Inflate {
     inner: Box<InflateState>,
-    total_in: u64,
-    total_out: u64,
+    pub total_in: u64,
+    pub total_out: u64,
 }
 
 impl fmt::Debug for Inflate {

@@ -37,7 +37,8 @@ pub struct Compress {
 /// [`Write`]: https://doc.rust-lang.org/std/io/trait.Write.html
 #[derive(Debug)]
 pub struct Decompress {
-    inner: Inflate,
+    /// inner is the underlying miniz_oxide decompression state.
+    pub inner: Inflate,
 }
 
 #[derive(Copy, Clone, PartialEq, Eq, Debug)]
